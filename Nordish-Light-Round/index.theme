@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Nordish-Light-Round
+Comment=Nord "Snow Storm" theme with Lycia's rounded shape language
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Nordish-Light-Round
+MetacityTheme=Nordish-Light-Round
+IconTheme=Adwaita
+CursorTheme=Adwaita
+ButtonLayout=close,minimize,maximize:menu

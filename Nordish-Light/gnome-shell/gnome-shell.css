@@ -1,0 +1,1045 @@
+/* Nordish-Light — GNOME Shell theme
+ * Palette: Nord "Snow Storm" (background) + "Polar Night" (foreground)
+ * https://www.nordtheme.com
+ *
+ * nord0  #2E3440  primary foreground / borders (dark)
+ * nord1  #3B4252  secondary foreground
+ * nord2  #434C5E  (unused here, reserved for dark variant)
+ * nord3  #4C566A  dim foreground, disabled text
+ * nord4  #D8DEE9  border / pressed surface
+ * nord5  #E5E9F0  raised surface / hover
+ * nord6  #ECEFF4  base background
+ * nord7  #8FBCBB  frost, secondary accent
+ * nord8  #88C0D0  frost, focus / links
+ * nord9  #81A1C1  frost
+ * nord10 #5E81AC  accent (selection, active toggles)
+ * nord11 #BF616A  error / red
+ * nord12 #D08770  orange
+ * nord13 #EBCB8B  warning / yellow
+ * nord14 #A3BE8C  success / green
+ * nord15 #B48EAD  purple
+ */
+
+/* ---------- Global ---------- */
+
+stage {
+  font-family: "Cantarell", sans-serif;
+  font-size: 10pt;
+  color: #2E3440;
+}
+
+.background-blur {
+  background-color: rgba(236, 239, 244, 0.85);
+}
+
+/* ---------- Top bar / panel ---------- */
+
+#panel {
+  background-color: rgba(236, 239, 244, 0.78);
+  color: #2E3440;
+  font-weight: normal;
+  height: 2.2em;
+  border-bottom: 1px solid rgba(216, 222, 233, 0.9);
+  box-shadow: none;
+  transition-duration: 150ms;
+}
+
+#panel.unlock-screen,
+#panel.login-screen,
+#panel.lock-screen {
+  background-color: rgba(236, 239, 244, 0.55);
+}
+
+#panel:overview {
+  background-color: rgba(229, 233, 240, 0.9);
+}
+
+#panel .panel-button {
+  color: #2E3440;
+  font-weight: normal;
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 6px;
+  transition-duration: 100ms;
+}
+
+#panel .panel-button:hover {
+  color: #2E3440;
+  background-color: rgba(46, 52, 64, 0.06);
+}
+
+#panel .panel-button:active,
+#panel .panel-button:focus,
+#panel .panel-button:checked {
+  color: #2E3440;
+  background-color: rgba(94, 129, 172, 0.16);
+  box-shadow: none;
+}
+
+#panel .panel-button.clock-display {
+  font-weight: 600;
+}
+
+#panel .system-status-icon {
+  icon-size: 1.09em;
+  padding: 0 5px;
+  color: #434C5E;
+}
+
+#panel .panel-button:hover .system-status-icon,
+#panel .panel-button:active .system-status-icon,
+#panel .panel-button:checked .system-status-icon {
+  color: #2E3440;
+}
+
+#panel .a11y-icon,
+#panel .keyboard-group,
+#panel .power-icon {
+  color: #434C5E;
+}
+
+#panel .panel-corner {
+  -panel-corner-radius: 0;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-color: transparent;
+}
+
+#appMenu .app-menu-icon-padding {
+  padding: 0 4px;
+}
+
+#appMenu StBoxLayout {
+  spacing: 4px;
+}
+
+/* Activities button */
+
+#panel #panelActivities:hover,
+#panel #panelActivities:active,
+#panel #panelActivities:checked {
+  background-color: rgba(94, 129, 172, 0.16);
+}
+
+/* GNOME hardcodes this dot white regardless of theme; needs matching
+ * specificity (+ !important) to actually override. */
+#panel .panel-button#panelActivities .workspace-dot,
+#panel:overview .panel-button#panelActivities .workspace-dot {
+  background-color: #434C5E !important;
+}
+
+/* ---------- Popup menus (panel dropdowns, quick settings) ---------- */
+
+.popup-menu {
+  -boxpointer-gap: 4px;
+  -arrow-rise: 6px;
+}
+
+.popup-menu-content,
+.popup-menu-content .quick-settings,
+#calendarArea {
+  background-color: rgba(236, 239, 244, 0.96);
+  color: #2E3440;
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 6px;
+}
+
+.popup-menu .popup-menu-item {
+  color: #2E3440;
+  spacing: 8px;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.popup-menu .popup-menu-item:hover,
+.popup-menu .popup-menu-item:active,
+.popup-menu .popup-menu-item:focus,
+.popup-menu .popup-menu-item.selected {
+  background-color: rgba(94, 129, 172, 0.18);
+  color: #2E3440;
+}
+
+.popup-menu .popup-menu-item:checked {
+  background-color: rgba(136, 192, 208, 0.22);
+}
+
+.popup-menu .popup-menu-item.disabled,
+.popup-menu .popup-menu-item:insensitive {
+  color: #D8DEE9;
+}
+
+.popup-menu .popup-sub-menu {
+  background-color: rgba(229, 233, 240, 0.98);
+  box-shadow: none;
+}
+
+.popup-separator-menu-item {
+  padding: 6px 0;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+  background-color: rgba(216, 222, 233, 0.9);
+  height: 1px;
+}
+
+.popup-menu-icon {
+  color: #434C5E;
+}
+
+/* ---------- Quick settings (GNOME 43+) ---------- */
+
+.quick-settings {
+  -QuickSettings-content-spacing: 8px;
+  min-width: 350px;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.quick-settings-grid {
+  spacing-rows: 12px;
+  spacing-columns: 12px;
+}
+
+/* Pill-shaped toggle buttons, matched to the same rounded, borderless
+ * form as the round window-control buttons and OSD pills elsewhere in
+ * this theme — recolored to Nord instead of following a specific
+ * accent brand color. */
+
+.icon-button,
+.quick-toggle,
+.quick-menu-toggle {
+  border-radius: 12px;
+  border: none;
+  transition-duration: 150ms;
+}
+
+.quick-toggle,
+.quick-menu-toggle {
+  min-width: 10em;
+  max-width: 10em;
+  min-height: 46px;
+}
+
+.quick-toggle > StBoxLayout {
+  spacing: 9px;
+  padding: 0 12px;
+}
+
+.quick-toggle:ltr > StBoxLayout {
+  padding-left: 15px;
+}
+
+.quick-toggle:rtl > StBoxLayout {
+  padding-right: 15px;
+}
+
+.quick-toggle .quick-toggle-subtitle {
+  font-weight: normal;
+}
+
+.quick-toggle-has-menu .quick-toggle {
+  min-width: auto;
+  max-width: auto;
+}
+
+.quick-toggle-has-menu .quick-toggle:ltr {
+  border-radius: 10px 0 0 10px;
+}
+
+.quick-toggle-has-menu .quick-toggle:rtl {
+  border-radius: 0 10px 10px 0;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  padding: 0.409em 0.71575em;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr {
+  border-radius: 0 10px 10px 0;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl {
+  border-radius: 10px 0 0 10px;
+}
+
+.quick-toggle-has-menu .quick-toggle-separator {
+  width: 0;
+}
+
+/* off / unchecked state */
+
+.icon-button,
+.quick-toggle,
+.quick-menu-toggle,
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  color: #2E3440;
+  background-color: #E5E9F0;
+}
+
+.icon-button:hover,
+.quick-toggle:hover,
+.quick-menu-toggle:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:hover {
+  background-color: #D8DEE9;
+}
+
+.icon-button:focus,
+.quick-toggle:focus,
+.quick-menu-toggle:focus,
+.quick-toggle-has-menu .quick-toggle-menu-button:focus {
+  background-color: #CBD3E0;
+  box-shadow: inset 0 0 0 2px rgba(94, 129, 172, 0.4) !important;
+}
+
+.icon-button:active,
+.quick-toggle:active,
+.quick-menu-toggle:active,
+.quick-toggle-has-menu .quick-toggle-menu-button:active {
+  background-color: #CBD3E0;
+}
+
+.icon-button:insensitive,
+.quick-toggle:insensitive,
+.quick-menu-toggle:insensitive {
+  color: rgba(46, 52, 64, 0.4);
+  background-color: rgba(229, 233, 240, 0.6);
+}
+
+/* on / checked state — Frost accent instead of a brand accent color */
+
+.icon-button:checked,
+.quick-toggle:checked,
+.quick-menu-toggle:checked,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  color: #ECEFF4;
+  background-color: #5E81AC;
+}
+
+.icon-button:checked:hover,
+.quick-toggle:checked:hover,
+.quick-menu-toggle:checked:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
+  background-color: #6C8DB5;
+}
+
+.icon-button:checked:focus,
+.quick-toggle:checked:focus,
+.quick-menu-toggle:checked:focus,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:focus {
+  background-color: #7597C0;
+  box-shadow: inset 0 0 0 2px rgba(236, 239, 244, 0.5) !important;
+}
+
+.icon-button:checked:active,
+.quick-toggle:checked:active,
+.quick-menu-toggle:checked:active,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
+  background-color: #52739C;
+}
+
+.icon-button:checked:insensitive,
+.quick-toggle:checked:insensitive,
+.quick-menu-toggle:checked:insensitive {
+  color: rgba(236, 239, 244, 0.6);
+  background-color: rgba(94, 129, 172, 0.5);
+}
+
+.quick-slider > StBoxLayout {
+  spacing: 6px;
+}
+
+.quick-slider .slider-bin {
+  padding: 6px;
+  border-radius: 999px;
+  background-color: #E5E9F0;
+}
+
+.quick-slider .slider-bin:focus {
+  background-color: #CBD3E0;
+  box-shadow: inset 0 0 0 2px rgba(94, 129, 172, 0.4) !important;
+}
+
+.quick-slider .slider-bin:focus:hover {
+  background-color: #D8DEE9;
+}
+
+.quick-settings-system-item {
+  background-color: rgba(46, 52, 64, 0.04);
+  border-radius: 12px;
+}
+
+.quick-settings-selector-button:checked {
+  background-color: #5E81AC;
+}
+
+/* Sliders (volume, brightness) */
+
+.slider {
+  height: 4px;
+  -barlevel-active-background-color: #5E81AC;
+  -barlevel-background-color: rgba(46, 52, 64, 0.12);
+  -barlevel-overdrive-color: #BF616A;
+  -slider-handle-radius: 8px;
+  -slider-handle-color: #2E3440;
+}
+
+/* Toggle switch */
+
+.toggle-switch {
+  -toggle-switch-border-radius: 999px;
+}
+
+.toggle-switch-us,
+.toggle-switch-slider {
+  background-color: rgba(46, 52, 64, 0.14);
+}
+
+.toggle-switch:checked .toggle-switch-us {
+  background-color: #5E81AC;
+}
+
+/* ---------- Calendar / date menu ----------
+ * Selectors below are scoped under #calendarArea so they always beat
+ * GNOME's own default gnome-shell-theme.gresource stylesheet at equal
+ * class-specificity — without that, identical-specificity rules there
+ * can win the cascade depending on stylesheet load order, silently
+ * leaving parts of this popover unstyled (e.g. the pager buttons,
+ * event/world-clock/weather text, or calendar day cells).
+ */
+
+.datemenu-popover {
+  border-radius: 18px;
+}
+
+#calendarArea .datemenu-calendar-column {
+  border: none;
+  spacing: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+#calendarArea .datemenu-today-button {
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding: 6px 12px;
+  margin: 4px;
+  color: rgba(46, 52, 64, 0.7);
+  border-radius: 6px;
+}
+
+#calendarArea .datemenu-today-button:hover,
+#calendarArea .datemenu-today-button:focus {
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+#calendarArea .datemenu-today-button:active {
+  background-color: rgba(46, 52, 64, 0.14);
+}
+
+#calendarArea .datemenu-today-button .day-label {
+  font-size: 1.091em;
+  font-weight: bold;
+}
+
+#calendarArea .datemenu-today-button .date-label {
+  font-size: 1.637em;
+  font-weight: normal;
+  color: #2E3440;
+}
+
+#calendarArea .calendar {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 3px;
+  margin: 0;
+  border-radius: 12px;
+  color: rgba(46, 52, 64, 0.7);
+}
+
+#calendarArea .calendar .calendar-month-header .calendar-month-label {
+  padding: 6px 0;
+  color: #2E3440;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+}
+
+#calendarArea .calendar .calendar-month-header .pager-button {
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #2E3440;
+  box-shadow: none;
+}
+
+#calendarArea .calendar .calendar-month-header .pager-button:hover,
+#calendarArea .calendar .calendar-month-header .pager-button:focus {
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+#calendarArea .calendar .calendar-month-header .pager-button:active {
+  background-color: rgba(46, 52, 64, 0.16);
+}
+
+#calendarArea .calendar .calendar-day {
+  font-size: 0.909em;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 2px;
+  border-radius: 999px;
+  color: rgba(46, 52, 64, 0.7);
+  border: none;
+  background-color: transparent;
+}
+
+#calendarArea .calendar .calendar-day:hover,
+#calendarArea .calendar .calendar-day:focus {
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+#calendarArea .calendar .calendar-day:active,
+#calendarArea .calendar .calendar-day:selected {
+  color: #2E3440;
+  background-color: rgba(46, 52, 64, 0.16);
+  border-color: transparent;
+}
+
+#calendarArea .calendar .calendar-day.calendar-weekend {
+  color: rgba(46, 52, 64, 0.4);
+}
+
+/* GNOME's own stylesheet marks today's date "color: ... !important",
+ * so this needs !important too to actually win — a plain rule here
+ * would silently lose to that default. */
+#calendarArea .calendar .calendar-day.calendar-today {
+  font-weight: bold;
+  color: #ECEFF4 !important;
+  background-color: #5E81AC;
+  border: none;
+}
+
+#calendarArea .calendar .calendar-day.calendar-today:hover,
+#calendarArea .calendar .calendar-day.calendar-today:focus {
+  background-color: #6C8DB5;
+}
+
+#calendarArea .calendar .calendar-day.calendar-today:active,
+#calendarArea .calendar .calendar-day.calendar-today:selected {
+  background-color: #46658A;
+}
+
+#calendarArea .calendar .calendar-day.calendar-other-month {
+  color: rgba(46, 52, 64, 0.32);
+  font-weight: normal;
+}
+
+#calendarArea .calendar .calendar-day-heading {
+  font-weight: bold;
+  text-align: center;
+  margin: 4px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #2E3440;
+}
+
+#calendarArea .calendar .calendar-week-number {
+  width: 26px;
+  height: 20px;
+  margin: 6px 2px;
+  padding: 0;
+  color: rgba(46, 52, 64, 0.4);
+  background-color: rgba(46, 52, 64, 0.06);
+}
+
+#calendarArea .world-clocks-button,
+#calendarArea .weather-button,
+#calendarArea .events-button {
+  color: rgba(46, 52, 64, 0.7);
+  background-color: rgba(46, 52, 64, 0.04);
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  padding: 12px;
+  margin: 2px 0;
+}
+
+#calendarArea .world-clocks-button:hover,
+#calendarArea .weather-button:hover,
+#calendarArea .events-button:hover,
+#calendarArea .world-clocks-button:focus,
+#calendarArea .weather-button:focus,
+#calendarArea .events-button:focus {
+  color: #2E3440;
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+#calendarArea .world-clocks-button:active,
+#calendarArea .weather-button:active,
+#calendarArea .events-button:active {
+  color: #2E3440;
+  background-color: rgba(46, 52, 64, 0.14);
+}
+
+#calendarArea .events-button .events-box .events-title {
+  font-weight: bold;
+  color: rgba(46, 52, 64, 0.4);
+}
+
+#calendarArea .events-button .events-box .events-list {
+  spacing: 12px;
+}
+
+#calendarArea .events-button .events-box .events-list .event-box .event-time,
+#calendarArea .events-button .events-box .events-list .event-placeholder {
+  color: rgba(46, 52, 64, 0.4);
+}
+
+#calendarArea .world-clocks-button .world-clocks-header {
+  color: rgba(46, 52, 64, 0.4);
+}
+
+#calendarArea .world-clocks-button .world-clocks-grid .world-clocks-time {
+  color: #2E3440;
+}
+
+#calendarArea .world-clocks-button .world-clocks-grid .world-clocks-timezone {
+  color: rgba(46, 52, 64, 0.4);
+}
+
+#calendarArea .weather-button .weather-box .weather-header-box .weather-header {
+  color: rgba(46, 52, 64, 0.4);
+}
+
+#calendarArea .weather-button .weather-box .weather-header-box .weather-header.no-location {
+  color: #2E3440;
+}
+
+/* ---------- Overview ---------- */
+
+#overview {
+  spacing: 16px;
+}
+
+.overview-controls {
+  spacing: 16px;
+}
+
+#overviewGroup,
+.background-clone {
+  background-color: #ECEFF4;
+}
+
+.search-entry {
+  width: 320px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  color: #2E3440;
+  padding: 8px 12px;
+  transition-duration: 100ms;
+}
+
+.search-entry:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-entry:focus {
+  background-color: #FFFFFF;
+  border-color: #5E81AC;
+  box-shadow: 0 0 0 1px rgba(94, 129, 172, 0.3);
+}
+
+.search-entry StIcon {
+  icon-size: 1em;
+  color: #D8DEE9;
+}
+
+.search-section-content {
+  spacing: 8px;
+}
+
+.search-statustext {
+  color: #D8DEE9;
+  font-weight: bold;
+}
+
+/* Dash */
+
+/* #dash itself stays transparent — the actual visible dock surface is
+ * the nested .dash-background node. Styling #dash directly leaves its
+ * (differently-shaped) box showing through around .dash-background's
+ * rounded corners, looking like a mismatched border/ring. */
+#dash {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#dash .dash-background {
+  background-color: rgba(229, 233, 240, 0.7);
+  border-radius: 24px;
+  padding: 12px 10px;
+}
+
+#dash .app-well-app,
+#dash .show-apps {
+  border-radius: 10px;
+}
+
+#dash .app-well-app:hover,
+#dash .app-well-app:focus,
+#dash .app-well-app:selected {
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+#dash .app-well-app.running > .overview-icon {
+  border-bottom-width: 0;
+}
+
+#dash .app-well-app.running .app-well-app-running-dot {
+  background-color: #5E81AC;
+  width: 6px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+#dash .dash-separator {
+  background-color: rgba(46, 52, 64, 0.15);
+  width: 1px;
+  margin: 0 4px;
+}
+
+.dash-item-container > StWidget.overview-icon {
+  border-radius: 12px;
+}
+
+/* Workspace thumbnails */
+
+.workspace-thumbnails {
+  spacing: 8px;
+}
+
+.workspace-thumbnail-indicator {
+  border: 2px solid #5E81AC;
+  border-radius: 6px;
+}
+
+.workspace-background {
+  border-radius: 10px;
+  background-color: #ECEFF4;
+}
+
+/* App grid */
+
+.app-grid {
+  spacing: 20px;
+}
+
+.app-well-app .overview-icon,
+.icon-grid .overview-icon {
+  border-radius: 12px;
+}
+
+.page-indicator .page-indicator-icon {
+  color: rgba(46, 52, 64, 0.25);
+}
+
+.page-indicator:checked .page-indicator-icon,
+.page-indicator:hover .page-indicator-icon {
+  color: #5E81AC;
+}
+
+.app-folder-icon {
+  background-color: rgba(216, 222, 233, 0.6);
+  border-radius: 14px;
+}
+
+.app-view-controls {
+  spacing: 8px;
+}
+
+/* GNOME's own default keeps app-tile names a near-white color even in
+ * the light theme (its hover/selected background stays dark by
+ * design for contrast) — that leaves names unreadable at rest against
+ * a light overview background. Dark text at rest, light text again on
+ * hover/selection where the background goes dark. */
+.overview-tile,
+.grid-search-result {
+  color: #2E3440;
+  text-shadow: none;
+}
+
+.overview-tile:hover,
+.grid-search-result:hover,
+.overview-tile:focus,
+.grid-search-result:focus,
+.overview-tile:active,
+.grid-search-result:active,
+.overview-tile:highlighted,
+.grid-search-result:highlighted,
+.overview-tile:selected,
+.grid-search-result:selected,
+.overview-tile:checked,
+.grid-search-result:checked {
+  color: #ECEFF4;
+}
+
+/* ---------- Alt-Tab / switcher ---------- */
+
+.switcher-list {
+  background-color: rgba(236, 239, 244, 0.96);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.switcher-list .item-box {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.switcher-list .item-box:selected,
+.switcher-list .item-box:outlined {
+  background-color: rgba(94, 129, 172, 0.18);
+}
+
+.switcher-list .thumbnail-box {
+  border-radius: 6px;
+}
+
+.switcher-arrow {
+  color: #434C5E;
+}
+
+/* ---------- Notifications / message tray ---------- */
+
+.message,
+.notification-banner {
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 12px;
+  color: #2E3440;
+  spacing: 8px;
+  padding: 10px;
+}
+
+.message:hover,
+.notification-banner:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.message-title,
+.notification-banner-label {
+  color: #2E3440;
+  font-weight: bold;
+}
+
+.message-body,
+.notification-banner .secondary-icon {
+  color: #434C5E;
+}
+
+.message-close-button {
+  color: #434C5E;
+}
+
+.message-close-button:hover {
+  color: #2E3440;
+}
+
+.message-list {
+  width: 380px;
+}
+
+.message-list-clear-button,
+.message-list-section-title {
+  color: #434C5E;
+}
+
+.summary-source-counter {
+  background-color: #BF616A;
+  color: #ECEFF4;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.notification-icon-button {
+  border-radius: 999px;
+}
+
+/* OSD (volume/brightness pop-ups) */
+
+.osd-window {
+  background-color: rgba(236, 239, 244, 0.9);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 14px;
+  color: #2E3440;
+  padding: 1em;
+}
+
+/* ---------- Modal dialogs / login & lock screen ---------- */
+
+.modal-dialog {
+  background-color: rgba(236, 239, 244, 0.98);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 14px;
+  color: #2E3440;
+}
+
+.modal-dialog-linked-button {
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  background-color: rgba(46, 52, 64, 0.03);
+  color: #2E3440;
+}
+
+.modal-dialog-linked-button:hover {
+  background-color: rgba(46, 52, 64, 0.07);
+}
+
+.modal-dialog-linked-button:default {
+  background-color: #5E81AC;
+  color: #ECEFF4;
+}
+
+.modal-dialog-linked-button:default:hover {
+  background-color: #81A1C1;
+}
+
+.login-dialog,
+.unlock-dialog,
+.end-session-dialog {
+  background-color: rgba(236, 239, 244, 0.92);
+}
+
+.login-dialog-banner,
+.login-dialog-prompt-label,
+.login-dialog-user-selection-box {
+  color: #2E3440;
+}
+
+.login-dialog-prompt-entry,
+.login-dialog-user-list-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.login-dialog-user-list-item:selected,
+.login-dialog-user-list-item:focus {
+  background-color: rgba(94, 129, 172, 0.18);
+}
+
+/* ---------- Scrollbars / entries / misc widgets ---------- */
+
+StScrollBar StScrollView {
+  padding-right: 6px;
+}
+
+StScrollBar StBin#trough {
+  background-color: rgba(46, 52, 64, 0.05);
+  border-radius: 999px;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+  background-color: rgba(46, 52, 64, 0.22);
+  border-radius: 999px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+  background-color: rgba(46, 52, 64, 0.35);
+}
+
+.tooltip .tooltip-content,
+.tooltip-content {
+  background-color: rgba(59, 66, 82, 0.95);
+  color: #ECEFF4;
+  border: 1px solid rgba(76, 86, 106, 0.6);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 9pt;
+}
+
+StEntry {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  color: #2E3440;
+  border-radius: 8px;
+  padding: 6px 8px;
+  selection-background-color: #5E81AC;
+}
+
+StEntry:focus {
+  border-color: #5E81AC;
+}
+
+StEntry StIcon {
+  color: #D8DEE9;
+}
+
+StButton.button {
+  background-color: rgba(46, 52, 64, 0.04);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  color: #2E3440;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+StButton.button:hover {
+  background-color: rgba(46, 52, 64, 0.08);
+}
+
+StButton.button:active,
+StButton.button:default {
+  background-color: #5E81AC;
+  color: #ECEFF4;
+}
+
+.hfade,
+.vfade {
+  -st-fade-color: #ECEFF4;
+}
+
+/* Workspace switcher OSD */
+
+.workspace-switcher {
+  background-color: rgba(236, 239, 244, 0.96);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 999px;
+  color: #2E3440;
+  spacing: 12px;
+  padding: 12px 18px;
+  box-shadow: none;
+}
+
+.workspace-switcher .ws-switcher-indicator {
+  background-color: rgba(46, 52, 64, 0.2);
+  border-radius: 999px;
+}
+
+.workspace-switcher .ws-switcher-indicator:active {
+  background-color: #5E81AC;
+}
+
+/* Screenshot UI */
+
+.screenshot-ui-panel,
+.screenshot-ui-type-button {
+  background-color: rgba(236, 239, 244, 0.96);
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 12px;
+  color: #2E3440;
+}
+
+.screenshot-ui-type-button:checked {
+  background-color: #5E81AC;
+  color: #ECEFF4;
+}

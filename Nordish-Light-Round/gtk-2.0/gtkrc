@@ -1,0 +1,125 @@
+# Nordish-Light — GTK2 "Legacy Application" theme
+# Palette: Nord "Snow Storm" (background) + "Polar Night" (foreground)
+# https://www.nordtheme.com
+#
+# Uses the built-in "default" GTK2 engine only, so it works without any
+# extra engine package (murrine, clearlooks, ...) installed. This keeps
+# the theme flat and minimal on purpose.
+
+gtk-color-scheme = "bg_color:#ECEFF4\nfg_color:#2E3440\nbase_color:#FFFFFF\ntext_color:#2E3440\nselected_bg_color:#5E81AC\nselected_fg_color:#ECEFF4\ntooltip_bg_color:#3B4252\ntooltip_fg_color:#ECEFF4"
+
+style "nordish-default"
+{
+  xthickness = 1
+  ythickness = 1
+
+  fg[NORMAL]      = "#2E3440"
+  fg[PRELIGHT]    = "#2E3440"
+  fg[SELECTED]    = "#ECEFF4"
+  fg[ACTIVE]      = "#2E3440"
+  fg[INSENSITIVE] = "#D8DEE9"
+
+  bg[NORMAL]      = "#ECEFF4"
+  bg[PRELIGHT]    = "#E5E9F0"
+  bg[SELECTED]    = "#5E81AC"
+  bg[ACTIVE]      = "#D8DEE9"
+  bg[INSENSITIVE] = "#ECEFF4"
+
+  base[NORMAL]      = "#FFFFFF"
+  base[PRELIGHT]    = "#E5E9F0"
+  base[SELECTED]    = "#5E81AC"
+  base[ACTIVE]      = "#D8DEE9"
+  base[INSENSITIVE] = "#ECEFF4"
+
+  text[NORMAL]      = "#2E3440"
+  text[PRELIGHT]    = "#2E3440"
+  text[SELECTED]    = "#ECEFF4"
+  text[ACTIVE]      = "#2E3440"
+  text[INSENSITIVE] = "#D8DEE9"
+
+  engine "default" { }
+}
+widget_class "*" style "nordish-default"
+
+style "nordish-button" = "nordish-default"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]   = "#E5E9F0"
+  bg[PRELIGHT] = "#D8DEE9"
+  bg[ACTIVE]   = "#D8DEE9"
+}
+widget_class "*<GtkButton>*" style "nordish-button"
+widget_class "*<GtkToggleButton>*" style "nordish-button"
+
+style "nordish-entry" = "nordish-default"
+{
+  base[NORMAL]      = "#FFFFFF"
+  base[SELECTED]    = "#5E81AC"
+  base[INSENSITIVE] = "#ECEFF4"
+  text[NORMAL]      = "#2E3440"
+}
+widget_class "*<GtkEntry>*" style "nordish-entry"
+widget_class "*<GtkTextView>*" style "nordish-entry"
+
+style "nordish-menu" = "nordish-default"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]   = "#ECEFF4"
+  fg[NORMAL]   = "#2E3440"
+  bg[PRELIGHT] = "#5E81AC"
+  fg[PRELIGHT] = "#ECEFF4"
+}
+class "GtkMenu" style "nordish-menu"
+class "GtkMenuItem" style "nordish-menu"
+class "GtkMenuBar" style "nordish-menu"
+
+style "nordish-notebook" = "nordish-default"
+{
+  bg[NORMAL]   = "#ECEFF4"
+  bg[ACTIVE]   = "#E5E9F0"
+}
+widget_class "*<GtkNotebook>*" style "nordish-notebook"
+
+style "nordish-scrollbar" = "nordish-default"
+{
+  bg[NORMAL]   = "#ECEFF4"
+  bg[PRELIGHT] = "#5E81AC"
+  bg[ACTIVE]   = "#D8DEE9"
+}
+widget_class "*<GtkScrollbar>*" style "nordish-scrollbar"
+widget_class "*<GtkVScrollbar>*" style "nordish-scrollbar"
+widget_class "*<GtkHScrollbar>*" style "nordish-scrollbar"
+
+style "nordish-tooltips"
+{
+  xthickness = 4
+  ythickness = 4
+  bg[NORMAL] = "#3B4252"
+  fg[NORMAL] = "#ECEFF4"
+}
+widget "gtk-tooltip*" style "nordish-tooltips"
+widget "gtk-tooltips*" style "nordish-tooltips"
+
+style "nordish-progressbar" = "nordish-default"
+{
+  bg[NORMAL]     = "#E5E9F0"
+  fg[PRELIGHT]   = "#ECEFF4"
+  bg[PRELIGHT]   = "#5E81AC"
+}
+widget_class "*<GtkProgressBar>*" style "nordish-progressbar"
+
+style "nordish-tree" = "nordish-default"
+{
+  base[NORMAL]   = "#FFFFFF"
+  base[SELECTED] = "#5E81AC"
+  fg[NORMAL]     = "#2E3440"
+}
+widget_class "*<GtkTreeView>*" style "nordish-tree"
+class "GtkTreeView" style "nordish-tree"
+
+gtk-icon-sizes = "gtk-menu=16,16:gtk-button=16,16:gtk-small-toolbar=16,16"
+gtk-toolbar-style = GTK_TOOLBAR_ICONS

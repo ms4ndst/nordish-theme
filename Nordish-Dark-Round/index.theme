@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Nordish-Dark-Round
+Comment=Nord "Polar Night" theme with Lycia's rounded shape language
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Nordish-Dark-Round
+MetacityTheme=Nordish-Dark-Round
+IconTheme=Adwaita
+CursorTheme=Adwaita
+ButtonLayout=close,minimize,maximize:menu
