@@ -8392,3 +8392,60 @@ FIXME this is really an API */
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
+
+/* ============================================================
+ * Nordish overrides — window control buttons
+ * ============================================================
+ * Replaces Colloid's macOS-style yellow/green/red traffic-light
+ * dots with a single neutral Nord tint, matching the round, subtle
+ * accents used elsewhere in this theme (gnome-shell panel buttons,
+ * quick toggles, OSD pills). Appended after the base theme so
+ * equal-specificity rules here win.
+ */
+
+button.minimize.titlebutton:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:not(.suggested-action):not(.destructive-action) {
+  background-color: rgba(46, 52, 64, 0.08);
+  background-image: none;
+  color: transparent;
+}
+
+button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action) {
+  background-color: rgba(46, 52, 64, 0.12);
+  box-shadow: none;
+}
+
+button.minimize.titlebutton:active:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
+  background-color: rgba(46, 52, 64, 0.18);
+  background-image: none;
+  box-shadow: none;
+}
+
+button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
+button.minimize.titlebutton:active:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
+  color: #2E3440;
+}
+
+button.minimize.titlebutton:backdrop:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:backdrop:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:backdrop:not(.suggested-action):not(.destructive-action) {
+  background-color: rgba(46, 52, 64, 0.04);
+}
+
+button.minimize.titlebutton:backdrop:hover:not(.suggested-action):not(.destructive-action),
+button.minimize.titlebutton:backdrop:active:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:backdrop:hover:not(.suggested-action):not(.destructive-action),
+button.maximize.titlebutton:backdrop:active:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:backdrop:hover:not(.suggested-action):not(.destructive-action),
+button.close.titlebutton:backdrop:active:not(.suggested-action):not(.destructive-action) {
+  color: rgba(46, 52, 64, 0.5);
+}

@@ -1057,6 +1057,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Date/Time Menu */
 #calendarArea {
   padding: 4px 0 !important;
+  background-color: rgba(59, 66, 82, 0.92) !important;
 }
 
 .calendar {

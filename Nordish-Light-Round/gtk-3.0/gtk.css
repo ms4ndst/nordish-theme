@@ -44,7 +44,7 @@
 calendar.raven-calendar:selected, .budgie-popover.budgie-menu row.activatable > button.flat:checked, box.vertical > widget > widget:selected, row:selected, treeview.view:selected, modelbutton.flat:selected,
 .menuitem.button.flat:selected {
   color: #2E3440;
-  background-color: #3a3c47;
+  background-color: #ECEFF4;
 }
 
 .nemo-window .view selection, .nemo-window .view:selected, .nautilus-window notebook .view:not(treeview) selection, .nautilus-window notebook .view:not(treeview):selected, .nautilus-window flowboxchild:selected .icon-item-background, flowbox flowboxchild:selected, .background.csd .view:selected {
@@ -8736,3 +8736,61 @@ FIXME this is really an API */
 @define-color BLACK_500 #393634;
 @define-color BLACK_700 #33302F;
 @define-color BLACK_900 #2B2928;
+
+/* ============================================================
+ * Nordish overrides — window control buttons
+ * ============================================================
+ * Replaces Lycia's macOS-style traffic-light dots with a single
+ * neutral Nord tint, matching Nordish-Light's round, subtle-tint
+ * title buttons. Appended after the base theme so equal-specificity
+ * rules here win.
+ */
+
+headerbar button.minimize.titlebutton,
+headerbar button.maximize.titlebutton,
+headerbar button.close.titlebutton {
+  background-color: rgba(46, 52, 64, 0.06);
+  background-image: none;
+  color: transparent;
+}
+
+headerbar button.minimize.titlebutton:hover,
+headerbar button.maximize.titlebutton:hover,
+headerbar button.close.titlebutton:hover {
+  background-color: rgba(46, 52, 64, 0.12);
+  background-image: none;
+  box-shadow: none;
+}
+
+headerbar button.minimize.titlebutton:active,
+headerbar button.maximize.titlebutton:active,
+headerbar button.close.titlebutton:active {
+  background-color: rgba(46, 52, 64, 0.12);
+  background-image: none;
+  box-shadow: none;
+}
+
+headerbar button.minimize.titlebutton:hover,
+headerbar button.minimize.titlebutton:active,
+headerbar button.maximize.titlebutton:hover,
+headerbar button.maximize.titlebutton:active,
+headerbar button.close.titlebutton:hover,
+headerbar button.close.titlebutton:active {
+  color: #2E3440;
+}
+
+headerbar button.minimize.titlebutton:backdrop,
+headerbar button.maximize.titlebutton:backdrop,
+headerbar button.close.titlebutton:backdrop {
+  background-color: rgba(46, 52, 64, 0.03);
+  color: transparent;
+}
+
+headerbar button.minimize.titlebutton:backdrop:hover,
+headerbar button.minimize.titlebutton:backdrop:active,
+headerbar button.maximize.titlebutton:backdrop:hover,
+headerbar button.maximize.titlebutton:backdrop:active,
+headerbar button.close.titlebutton:backdrop:hover,
+headerbar button.close.titlebutton:backdrop:active {
+  color: rgba(46, 52, 64, 0.5);
+}
