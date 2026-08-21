@@ -688,7 +688,7 @@ stage {
 }
 
 #dash .dash-background {
-  background-color: rgba(229, 233, 240, 0.7);
+  background-color: rgba(59, 66, 82, 0.75);
   border-radius: 24px;
   padding: 12px 10px;
 }
@@ -701,7 +701,7 @@ stage {
 #dash .app-well-app:hover,
 #dash .app-well-app:focus,
 #dash .app-well-app:selected {
-  background-color: rgba(46, 52, 64, 0.08);
+  background-color: rgba(236, 239, 244, 0.12);
 }
 
 #dash .app-well-app.running > .overview-icon {
@@ -716,7 +716,7 @@ stage {
 }
 
 #dash .dash-separator {
-  background-color: rgba(46, 52, 64, 0.15);
+  background-color: rgba(236, 239, 244, 0.2);
   width: 1px;
   margin: 0 4px;
 }

@@ -1058,6 +1058,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #calendarArea {
   padding: 4px 0 !important;
   background-color: rgba(59, 66, 82, 0.85) !important;
+  border-radius: 18px !important;
 }
 
 .calendar {
@@ -4809,7 +4810,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer #dash .dash-background {
-    background-color: transparent !important;
+    background-color: rgba(59, 66, 82, 0.65) !important;
 }
 #dashtodockContainer #dash {
     background-color: transparent !important;
@@ -4915,4 +4916,34 @@ StWidget.focused .app-grid-running-dot {
 .overview-components-light .search-entry StLabel.hint-text,
 .overview-components-dark .search-entry StLabel.hint-text {
   color: rgba(216, 222, 233, 0.35) !important;
+}
+
+/* ============================================================
+ * Nordish overrides — quick-settings checked/accent color
+ * ============================================================
+ * Lycia's own "checked" toggle state is a lightened neutral overlay
+ * (rgba(0,0,0,X) recolored to Nord neutral), not a distinct accent
+ * hue. Matching Nordish-Dark's actual Frost-accent checked state
+ * instead. Needs !important to beat Lycia's own !important rules.
+ */
+
+.quick-toggle:checked,
+.quick-menu-toggle:checked,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  background-color: #88C0D0 !important;
+  color: #2E3440 !important;
+}
+
+.quick-toggle:checked:hover,
+.quick-menu-toggle:checked:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
+  background-color: #7FB4C4 !important;
+  color: #2E3440 !important;
+}
+
+.quick-toggle:checked:active,
+.quick-menu-toggle:checked:active,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
+  background-color: #6FA4B4 !important;
+  color: #2E3440 !important;
 }

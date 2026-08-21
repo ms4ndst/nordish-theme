@@ -271,7 +271,7 @@ entry {
   padding: 0 8px;
   border-radius: 10px;
   caret-color: currentColor;
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: alpha(currentColor, 0.05);
   color: #2E3440;
@@ -360,7 +360,7 @@ entry undershoot.right {
 
 spinbutton.error.vertical, spinbutton.error:not(.vertical),
 entry.error {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: alpha(currentColor, 0.05);
   color: #2E3440;
@@ -381,7 +381,7 @@ entry.error:disabled {
 
 spinbutton.warning.vertical, spinbutton.warning:not(.vertical),
 entry.warning {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: alpha(currentColor, 0.05);
   color: #2E3440;
@@ -409,7 +409,7 @@ entry progress {
 
 .gedit-search-slider .linked:not(.vertical) > entry {
   border-radius: 10px;
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: none;
   box-shadow: inset 0 0 0 2px transparent;
   background-color: #ECEFF4;
@@ -432,7 +432,7 @@ entry progress {
 }
 
 .gedit-search-slider .linked:not(.vertical) > entry.error {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: none;
   box-shadow: inset 0 0 0 2px transparent;
   background-color: #BF616A;
@@ -463,7 +463,7 @@ entry progress {
 }
 
 .gedit-search-slider .linked:not(.vertical) > entry.warning {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   border-image: none;
   box-shadow: inset 0 0 0 2px transparent;
   background-color: #EBCB8B;
@@ -566,7 +566,7 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 }
 
 actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action), button {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
   background-color: alpha(currentColor, 0.05);
@@ -586,8 +586,8 @@ actionbar > revealer > box .linked > button:hover:not(.suggested-action):not(.de
 }
 
 actionbar > revealer > box .linked > button:active:not(.suggested-action):not(.destructive-action), button:active {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms, border 0ms;
-  animation: ripple 225ms cubic-bezier(#3B4252.2, 1) forwards;
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  animation: ripple 225ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   background-image: radial-gradient(circle, alpha(currentColor, 0.12) 10%, transparent 0%);
   background-size: 0% 0%;
@@ -657,7 +657,7 @@ radio, scrollbar button, notebook > header > tabs > arrow, spinbutton.vertical b
 .menuitem.button.flat, .nemo-window .toolbar button, #buttonbox_frame button, .xfce4-panel.background button, .xfce4-panel.background button.flat, .raven stackswitcher.linked > button, .lock-dialog button, .mate-panel-menu-bar button, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button, layouttabbar button, filechooser #pathbarbox > stack > box > button, messagedialog.csd .dialog-action-box button, .app-notification button, actionbar > revealer > box button:not(.suggested-action):not(.destructive-action), .caja-pathbar button,
 .path-bar.linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.text-button), headerbar button:not(.suggested-action):not(.destructive-action), toolbar button, combobox > .linked:not(.vertical) > button:not(:only-child), .inline-toolbar button, button.flat {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), border-image 225ms cubic-bezier(#3B4252.2, 1), background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), border-image 225ms cubic-bezier(0.4, 0, 0.2, 1), background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
   background-color: transparent;
@@ -697,8 +697,8 @@ radio:active, scrollbar button:active, notebook > header > tabs > arrow:active, 
 .menuitem.button.flat:active, .nemo-window .toolbar button:active, #buttonbox_frame button:active, .xfce4-panel.background button:active, .raven stackswitcher.linked > button:active, .lock-dialog button:active, .mate-panel-menu-bar button:active, window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active,
 window#GearyMainWindow.background.csd stack#conversation_viewer .geary-expanded > .geary-composer-embed headerbar button:active, layouttabbar button:active, filechooser #pathbarbox > stack > box > button:active, messagedialog.csd .dialog-action-box button:active, .app-notification button:active, actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action), .caja-pathbar button:active,
 .path-bar.linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.text-button), headerbar button:active:not(.suggested-action):not(.destructive-action), toolbar button:active, combobox > .linked:not(.vertical) > button:active:not(:only-child), .inline-toolbar button:active, button.flat:active {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), border-image 225ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms;
-  animation: ripple 225ms cubic-bezier(#3B4252.2, 1) forwards;
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), border-image 225ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple 225ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   background-image: radial-gradient(circle, alpha(currentColor, 0.12) 10%, transparent 0%);
   background-size: 0% 0%;
@@ -922,7 +922,7 @@ button.destructive-action.flat:checked {
 
 stacksidebar.sidebar row.needs-attention > label, .stack-switcher > button.needs-attention > label,
 .stack-switcher > button.needs-attention > image {
-  animation: needs-attention 225ms cubic-bezier(#3B4252.2, 1) forwards;
+  animation: needs-attention 225ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   background-repeat: no-repeat;
   background-position: right 3px;
   background-size: 6px 6px;
@@ -1141,7 +1141,7 @@ combobox > .linked:not(.vertical) > button:not(:only-child) {
 button.combo:only-child {
   border-radius: 10px;
   font-weight: normal;
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 300ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: alpha(currentColor, 0.05);
   color: #2E3440;
@@ -1182,7 +1182,7 @@ toolbar {
 }
 
 frame.documents-dropdown, .app-notification, toolbar.osd {
-  transition: box-shadow 75ms cubic-bezier(#3B4252.2, 1);
+  transition: box-shadow 75ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 4px;
   border-radius: 10px;
   box-shadow: 0 2px 2px -1px rgba(#3B4252, 0.2), 0 4px 4px 0 rgba(#3B4252, 0.14), 0 1px 6px 0 rgba(#3B4252, 0.12), inset 0 1px rgba(46, 52, 64, 0.1);
@@ -1333,7 +1333,7 @@ searchbar > revealer > box {
 }
 
 .titlebar {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1), color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1), color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 16px 16px 0 0;
   box-shadow: inset 0 -1px rgba(46, 52, 64, 0.12), inset 0 1px rgba(46, 52, 64, 0.1);
   background-color: #ECEFF4;
@@ -1366,7 +1366,7 @@ searchbar > revealer > box {
 
 .titlebar .subtitle,
 .titlebar .dim-label {
-  transition: color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(46, 52, 64, 0.7);
 }
 
@@ -1422,8 +1422,8 @@ searchbar > revealer > box {
 }
 
 .titlebar.selection-mode {
-  transition: background-color 0.1ms 225ms, color 75ms cubic-bezier(#3B4252.2, 1);
-  animation: ripple-on-headerbar 225ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 0.1ms 225ms, color 75ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: ripple-on-headerbar 225ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 1px rgba(46, 52, 64, 0.2);
   background-color: #5E81AC;
  color: rgba(59, 66, 82, 0.87);
@@ -1671,7 +1671,7 @@ headerbar button.close.titlebutton:active {
   box-shadow: none;
   color: transparent;
   animation: none;
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:hover, .background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:active {
@@ -2033,7 +2033,7 @@ menuitem:disabled accelerator {
  * Popovers *
  ************/
 popover.background {
-  transition: box-shadow 75ms cubic-bezier(#3B4252.2, 1);
+  transition: box-shadow 75ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
   box-shadow: 0 2px 2px -1px rgba(#3B4252, 0.2), 0 4px 4px 0 rgba(#3B4252, 0.14), 0 1px 6px 0 rgba(#3B4252, 0.12);
   background-color: #ECEFF4;
@@ -2125,7 +2125,7 @@ popover.background list separator {
  * Notebooks *
  *************/
 tabbox > tab, notebook > header tab {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms;
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms;
   min-height: 22px;
   min-width: 22px;
   padding: 4px 12px;
@@ -2147,7 +2147,7 @@ tabbox > tab:disabled, notebook > header tab:disabled {
 }
 
 tabbox > tab:checked, notebook > header tab:checked {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ECEFF4;
   background-clip: padding-box;
   border-color: #D8DEE9;
@@ -2387,7 +2387,7 @@ notebook > header > tabs > arrow {
 }
 
 notebook > header tab > box {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: -4px -12px;
   padding: 4px 12px;
 }
@@ -2445,7 +2445,7 @@ notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs t
  * Scrollbars *
  **************/
 scrollbar {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ECEFF4;
 }
 
@@ -2471,7 +2471,7 @@ scrollbar.right {
 }
 
 scrollbar slider {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 8px;
   min-height: 8px;
   border: 4px solid transparent;
@@ -2591,7 +2591,7 @@ scrollbar.horizontal button.up {
  * Switch *
  **********/
 switch {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 4px 0;
   padding: 0 2px;
   border: 5px solid transparent;
@@ -2615,7 +2615,7 @@ switch image {
 }
 
 switch slider {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 20px;
   min-height: 20px;
   margin: -3px -2px;
@@ -2869,7 +2869,7 @@ scale slider {
   min-height: 32px;
   min-width: 32px;
   margin: -15px;
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1), background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto, 1000% 1000%;
@@ -2898,8 +2898,8 @@ scale slider:focus:hover {
 }
 
 scale slider:active {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms;
-  animation: ripple-on-slider 225ms cubic-bezier(#3B4252.2, 1) forwards;
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple-on-slider 225ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   background-color: alpha(currentColor, 0.08);
   background-image: -gtk-scaled(url("assets/scale-slider-dark.png"), url("assets/scale-slider-dark@2.png")), radial-gradient(circle, alpha(currentColor, 0.12) 10%, transparent 0%);
   background-size: auto, 0% 0%;
@@ -2922,7 +2922,7 @@ scale.fine-tune slider {
 }
 
 scale trough {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   background-color: rgba(46, 52, 64, 0.3);
 }
@@ -2932,7 +2932,7 @@ scale trough:disabled {
 }
 
 scale highlight {
-  transition: background-image 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-image 75ms cubic-bezier(0.4, 0, 0.2, 1);
   background-image: image(#5E81AC);
 }
 
@@ -2942,7 +2942,7 @@ scale highlight:disabled {
 }
 
 scale fill {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(46, 52, 64, 0.3);
 }
 
@@ -3367,7 +3367,7 @@ list row {
 }
 
 .budgie-popover.budgie-menu row.activatable > button.flat, .budgie-popover scrolledwindow.sidebar + separator + scrolledwindow list > row.activatable, .budgie-popover scrolledwindow.sidebar:not(.categories) list > row.activatable, treeview.view header button, row.activatable {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   box-shadow: inset 0 0 0 9999px transparent;
   background-image: radial-gradient(circle, transparent 10%, transparent 0%);
@@ -3381,13 +3381,13 @@ list row {
 }
 
 .budgie-popover.budgie-menu row.activatable > button.flat:hover, .budgie-popover scrolledwindow.sidebar + separator + scrolledwindow list > row.activatable:hover, .budgie-popover scrolledwindow.sidebar:not(.categories) list > row.activatable:hover, treeview.view header button:hover, row.activatable:hover {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
 .budgie-popover.budgie-menu row.activatable > button.has-open-popup.flat, .budgie-popover scrolledwindow.sidebar + separator + scrolledwindow list > row.has-open-popup.activatable, .budgie-popover scrolledwindow.sidebar:not(.categories) list > row.has-open-popup.activatable, treeview.view header button.has-open-popup, .budgie-popover.budgie-menu row.activatable > button.flat:active, .budgie-popover scrolledwindow.sidebar + separator + scrolledwindow list > row.activatable:active, .budgie-popover scrolledwindow.sidebar:not(.categories) list > row.activatable:active, treeview.view header button:active, row.activatable.has-open-popup, row.activatable:active {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms;
-  animation: ripple 225ms cubic-bezier(#3B4252.2, 1) forwards;
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple 225ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
   background-image: radial-gradient(circle, alpha(currentColor, 0.12) 10%, transparent 0%);
   background-size: 0% 0%;
@@ -3436,7 +3436,7 @@ row:selected:disabled label {
  * Expanders *
  *************/
 expander title > arrow {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 16px;
   min-height: 16px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -3655,7 +3655,7 @@ separator.sidebar {
  * File chooser *
  ****************/
 row image.sidebar-icon {
-  transition: color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(46, 52, 64, 0.7);
 }
 
@@ -3729,7 +3729,7 @@ placessidebar.sidebar row.sidebar-new-bookmark-row image.sidebar-icon {
 }
 
 placessidebar.sidebar row:drop(active) {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(#3B4252.2, 1), background-image 1200ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0ms, background-size 300ms cubic-bezier(0.4, 0, 0.2, 1), background-image 1200ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
 }
 
@@ -3977,7 +3977,7 @@ colorswatch#editor-color-sample overlay {
 }
 
 colorchooser .popover.osd {
-  transition: box-shadow 75ms cubic-bezier(#3B4252.2, 1);
+  transition: box-shadow 75ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 10px;
   box-shadow: 0 2px 2px -1px rgba(#3B4252, 0.2), 0 4px 4px 0 rgba(#3B4252, 0.14), 0 1px 6px 0 rgba(#3B4252, 0.12), inset 0 1px rgba(46, 52, 64, 0.1);
   background-color: #ECEFF4;
@@ -4006,7 +4006,7 @@ decoration {
 
 decoration:backdrop {
   box-shadow: 0 2px 2px -1px rgba(#3B4252, 0.2), 0 4px 4px 0 rgba(#3B4252, 0.14), 0 1px 6px 0 rgba(#3B4252, 0.12), 0 16px 16px 2px transparent, 0 6px 18px 5px transparent;
-  transition: box-shadow 75ms cubic-bezier(#3B4252.2, 1);
+  transition: box-shadow 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
@@ -4194,7 +4194,7 @@ popover.emoji-picker .emoji {
 }
 
 popover.emoji-picker .emoji widget {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 10px;
 }
 
@@ -4520,7 +4520,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .path-bar-box {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 4px 0;
   border-radius: 9999px;
 }
@@ -4870,7 +4870,7 @@ row#workspaces-only-on-primary {
 leaflet.titlebar > .titlebar.tweak-titlebar-right, leaflet.titlebar > .titlebar.tweak-titlebar-left, hdyleaflet.titlebar > .titlebar.tweak-titlebar-right, hdyleaflet.titlebar > .titlebar.tweak-titlebar-left {
   background-color: inherit;
   box-shadow: inherit;
-  transition: color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: color 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 leaflet.titlebar > .titlebar.tweak-titlebar-right + separator, leaflet.titlebar > .titlebar.tweak-titlebar-left + separator, hdyleaflet.titlebar > .titlebar.tweak-titlebar-right + separator, hdyleaflet.titlebar > .titlebar.tweak-titlebar-left + separator {
@@ -5390,7 +5390,7 @@ docktabstrip {
 }
 
 docktab {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 0ms, background-image 0ms;
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 0ms, background-image 0ms;
   min-height: 22px;
   min-width: 22px;
   margin-bottom: -1px;
@@ -5412,7 +5412,7 @@ docktab:hover {
 }
 
 docktab:checked {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1), background-size 225ms cubic-bezier(#3B4252.2, 1), background-image 525ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1), background-size 225ms cubic-bezier(0.4, 0, 0.2, 1), background-image 525ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: inset 0 -2px #5E81AC;
   background-color: transparent;
   background-image: radial-gradient(circle, transparent 10%, transparent 0%);
@@ -5580,12 +5580,12 @@ GdMainIconView.content-view {
 
 .photos-fade-in {
   opacity: 1;
-  transition: opacity 75ms cubic-bezier(#3B4252.2, 1);
+  transition: opacity 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photos-fade-out {
   opacity: 0;
-  transition: opacity 75ms cubic-bezier(#3B4252.2, 1);
+  transition: opacity 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button.photos-filter-preview {
@@ -5774,7 +5774,7 @@ popover.background.menu radiobutton.system, popover.background.menu radiobutton.
  * To Do *
  *********/
 task-list-view taskrow {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 -8px;
 }
 
@@ -5941,7 +5941,7 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
 .geary-main-window > deck > overlay > .geary-main-layout > leaflet > leaflet > separator.sidebar {
   background-color: transparent;
   background-image: linear-gradient(to bottom, #ECEFF4 0%, #ECEFF4 39px, rgba(46, 52, 64, 0.12) 39px, rgba(46, 52, 64, 0.12) 100%);
-  transition: background-image 75ms cubic-bezier(#3B4252.2, 1), color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-image 75ms cubic-bezier(0.4, 0, 0.2, 1), color 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .geary-main-window > deck > overlay > .geary-main-layout > leaflet > separator.sidebar:backdrop,
@@ -7017,7 +7017,7 @@ na-tray-applet {
 }
 
 #PanelApplet:not(:selected) > box {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #PanelApplet:selected > box {
@@ -7593,7 +7593,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .workspace-switcher .workspace-item {
-  transition: all 75ms cubic-bezier(#3B4252.2, 1);
+  transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .workspace-switcher .workspace-item.current-workspace {
@@ -7620,7 +7620,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel {
-  transition: background-color 75ms cubic-bezier(#3B4252.2, 1);
+  transition: background-color 75ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ECEFF4;
   color: rgba(46, 52, 64, 0.7);
   font-weight: 500;
@@ -8751,13 +8751,13 @@ headerbar button.maximize.titlebutton,
 headerbar button.close.titlebutton {
   background-color: rgba(46, 52, 64, 0.06);
   background-image: none;
-  color: transparent;
+  color: rgba(46, 52, 64, 0.7);
 }
 
 headerbar button.minimize.titlebutton:hover,
 headerbar button.maximize.titlebutton:hover,
 headerbar button.close.titlebutton:hover {
-  background-color: #BF616A;
+  background-color: rgba(46, 52, 64, 0.16);
   background-image: none;
   box-shadow: none;
 }
@@ -8765,7 +8765,7 @@ headerbar button.close.titlebutton:hover {
 headerbar button.minimize.titlebutton:active,
 headerbar button.maximize.titlebutton:active,
 headerbar button.close.titlebutton:active {
-  background-color: #A54E57;
+  background-color: rgba(46, 52, 64, 0.24);
   background-image: none;
   box-shadow: none;
 }
@@ -8776,14 +8776,14 @@ headerbar button.maximize.titlebutton:hover,
 headerbar button.maximize.titlebutton:active,
 headerbar button.close.titlebutton:hover,
 headerbar button.close.titlebutton:active {
-  color: #ECEFF4;
+  color: #2E3440;
 }
 
 headerbar button.minimize.titlebutton:backdrop,
 headerbar button.maximize.titlebutton:backdrop,
 headerbar button.close.titlebutton:backdrop {
   background-color: rgba(46, 52, 64, 0.03);
-  color: transparent;
+  color: rgba(46, 52, 64, 0.35);
 }
 
 headerbar button.minimize.titlebutton:backdrop:hover,
@@ -8793,4 +8793,51 @@ headerbar button.maximize.titlebutton:backdrop:active,
 headerbar button.close.titlebutton:backdrop:hover,
 headerbar button.close.titlebutton:backdrop:active {
   color: rgba(46, 52, 64, 0.5);
+}
+
+/* ============================================================
+ * Nordish overrides — real GTK3 headerbar apps (not Slack/Electron)
+ * ============================================================
+ * Lycia ships its own hardcoded-white minimize/maximize/close SVGs
+ * and only assigns them on :hover/:active (transparent at rest,
+ * macOS-reveal style) via a highly ancestor-scoped selector that
+ * out-specifies the plain override above — so it wins for genuine
+ * GTK headerbar apps regardless of what's set there. White icons
+ * are invisible against a light circle, and rest stays blank by
+ * design either way. Clearing the custom icon here lets GTK fall
+ * back to its own stock symbolic icon, auto-recolored via `color`
+ * (which we do set, above) — visible in every state, no custom
+ * icon assets needed at all. Matches Lycia's exact selectors so
+ * this actually out-specifies (rather than merely appends after)
+ * the rules being replaced.
+ */
+
+.background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton,
+.background.csd headerbar.titlebar.default-decoration button.maximize.titlebutton,
+.background.csd headerbar.titlebar.default-decoration button.close.titlebutton {
+  color: rgba(46, 52, 64, 0.7);
+}
+
+.background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:hover,
+.background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:active {
+  background-image: none;
+  color: #2E3440;
+}
+
+.background.csd headerbar.titlebar.default-decoration button.maximize.titlebutton:hover,
+.background.csd headerbar.titlebar.default-decoration button.maximize.titlebutton:active {
+  background-image: none;
+  color: #2E3440;
+}
+
+.background.csd headerbar.titlebar.default-decoration button.close.titlebutton:hover,
+.background.csd headerbar.titlebar.default-decoration button.close.titlebutton:active {
+  background-image: none;
+  color: #2E3440;
+}
+
+.background.csd.maximized headerbar.titlebar.default-decoration button.titlebutton.maximize:hover,
+.background.csd.maximized headerbar.titlebar.default-decoration button.titlebutton.maximize:active {
+  background-image: none;
+  color: #2E3440;
 }

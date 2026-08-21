@@ -41,14 +41,42 @@ mirrors the GTK3 one with the property/selector names that changed
 between the two (`-gtk-icon-effect` instead of `-gtk-icon-shadow`,
 `notebook > header > tabs > tab` instead of `notebook > header tab`).
 
+## Round variants
+
+`Nordish-Dark-Round` and `Nordish-Light-Round` pair the same Nord palette
+with a rounded shape language (pill-shaped buttons, larger radii, ripple
+animations) instead of the flat originals' minimal styling.
+
+- `gnome-shell/` in both is derived from the **Lycia** theme's shape,
+  recolored to Nord.
+- `gtk-2.0/`, `gtk-3.0/`, and `gtk-4.0/` in **both** Round variants are
+  plain copies of `Nordish-Dark`'s / `Nordish-Light`'s own GTK
+  stylesheets (not Lycia-derived) — Lycia's GTK layer had a persistent,
+  never-fully-resolved bug where Electron/Chromium apps (Slack, VS
+  Code, Discord) rendered a white window-frame top bar instead of the
+  themed dark/light one, traced to several compounding issues in
+  Lycia's own compiled CSS. Reusing the flat theme's proven-working GTK
+  layer was more reliable than continuing to patch Lycia's. Practical
+  effect: application windows (headerbars, buttons, dialogs) look
+  identical between a Round variant and its flat counterpart; only the
+  GNOME Shell chrome (top bar, quick settings, calendar, dash) differs.
+
+`Nordish-Light`'s own GTK3 layer is a full Nord recolor of the
+**Colloid-Light** theme (not hand-authored), for the same shape-reuse
+reason; `Nordish-Dark`'s GTK3 layer is a Nord recolor of
+**Nordic-Polar-standard-buttons**. Both keep their own hand-authored
+GTK4 stylesheets.
+
 ## Install
 
 ```sh
 ./install.sh
 ```
 
-This symlinks both theme folders into `~/.themes/`, so `git pull` updates
-apply without reinstalling. Then:
+This copies all four theme folders into `~/.themes/`. Re-run it after
+pulling changes or editing anything here — since it's a copy, not a
+symlink, edits in this repo won't show up in `~/.themes` until you do.
+Then:
 
 1. Install the **User Themes** extension if you don't have it, so GNOME
    Tweaks can set a custom shell theme:
