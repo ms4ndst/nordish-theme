@@ -180,8 +180,8 @@ decoration .titlebutton:hover,
 headerbar button.titlebutton:hover,
 headerbar button.titlebutton:checked {
   border-radius: 9999px;
-  background-color: alpha(#2E3440, 0.16);
-  color: #2E3440;
+  background-color: #5E81AC;
+  color: #ECEFF4;
   border: none;
   box-shadow: none;
 }
@@ -191,8 +191,8 @@ decoration .titlebutton:active,
 .titlebar button.titlebutton:active,
 headerbar button.titlebutton:active {
   border-radius: 9999px;
-  background-color: alpha(#2E3440, 0.24);
-  color: #2E3440;
+  background-color: #52739C;
+  color: #ECEFF4;
   border: none;
   box-shadow: none;
 }

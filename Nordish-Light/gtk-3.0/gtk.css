@@ -8413,14 +8413,14 @@ button.close.titlebutton:not(.suggested-action):not(.destructive-action) {
 button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(46, 52, 64, 0.16);
+  background-color: #5E81AC;
   box-shadow: none;
 }
 
 button.minimize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(46, 52, 64, 0.24);
+  background-color: #52739C;
   box-shadow: none;
 }
 
@@ -8430,7 +8430,7 @@ button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action
 button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
-  color: #2E3440;
+  color: #ECEFF4;
 }
 
 button.minimize.titlebutton:backdrop:not(.suggested-action):not(.destructive-action),
@@ -8472,20 +8472,20 @@ button.close.titlebutton:backdrop:active:not(.suggested-action):not(.destructive
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton:hover, .background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action), #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton:active, .background.csd headerbar.titlebar.default-decoration button.minimize.titlebutton:active:not(.suggested-action):not(.destructive-action) {
   background-image: none;
-  color: #2E3440;
+  color: #ECEFF4;
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton:hover, .background.csd headerbar.titlebar.default-decoration button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action), #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton:active, .background.csd headerbar.titlebar.default-decoration button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action) {
   background-image: none;
-  color: #2E3440;
+  color: #ECEFF4;
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton:hover, .background.csd headerbar.titlebar.default-decoration button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action), #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton:active, .background.csd headerbar.titlebar.default-decoration button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
   background-image: none;
-  color: #2E3440;
+  color: #ECEFF4;
 }
 
 .background.csd.maximized headerbar.titlebar.default-decoration button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:hover, .background.csd.maximized headerbar.titlebar.default-decoration button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:active {
   background-image: none;
-  color: #2E3440;
+  color: #ECEFF4;
 }
