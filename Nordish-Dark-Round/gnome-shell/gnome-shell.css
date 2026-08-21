@@ -1057,7 +1057,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Date/Time Menu */
 #calendarArea {
   padding: 4px 0 !important;
-  background-color: rgba(59, 66, 82, 0.85) !important;
+  background-color: transparent !important;
   border-radius: 18px !important;
 }
 
@@ -4946,4 +4946,47 @@ StWidget.focused .app-grid-running-dot {
 .quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
   background-color: #6FA4B4 !important;
   color: #2E3440 !important;
+}
+
+/* ============================================================
+ * Nordish overrides — notification rows in the calendar/date-menu
+ * ============================================================
+ * Lycia's own ".message"/".popup-menu .message" rules use a very low
+ * alpha (0.04-0.08), reading as nearly transparent/messy against the
+ * popover behind them. Matches Nordish-Dark's exact values.
+ */
+
+.message {
+  background-color: rgba(59, 66, 82, 0.95) !important;
+  border: 1px solid rgba(76, 86, 106, 0.6);
+  border-radius: 12px;
+  color: #ECEFF4;
+  spacing: 8px;
+  padding: 10px;
+}
+
+.message:hover {
+  background-color: rgba(67, 76, 94, 0.98) !important;
+}
+
+.message-title {
+  color: #ECEFF4;
+  font-weight: bold;
+}
+
+.message-body {
+  color: #D8DEE9;
+}
+
+.message-close-button {
+  color: #4C566A;
+}
+
+.message-close-button:hover {
+  color: #ECEFF4;
+}
+
+.message-list-clear-button,
+.message-list-section-title {
+  color: #D8DEE9;
 }

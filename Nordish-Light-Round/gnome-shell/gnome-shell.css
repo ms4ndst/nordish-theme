@@ -1057,7 +1057,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Date/Time Menu */
 #calendarArea {
   padding: 4px 0 !important;
-  background-color: rgba(236, 239, 244, 0.96) !important;
+  background-color: transparent !important;
   border-radius: 18px !important;
 }
 
@@ -4946,4 +4946,49 @@ StWidget.focused .app-grid-running-dot {
 .quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
   background-color: #52739C !important;
   color: #ECEFF4 !important;
+}
+
+/* ============================================================
+ * Nordish overrides — notification rows in the calendar/date-menu
+ * ============================================================
+ * Lycia never gives the plain ".message" node (used for rows in the
+ * date-menu's Notifications tab) its own background — only
+ * ".notification-banner" (the transient popup) got one — leaving
+ * these rows fully transparent against whatever's behind the
+ * popover. Matches Nordish-Light's exact values.
+ */
+
+.message {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(216, 222, 233, 0.9);
+  border-radius: 12px;
+  color: #2E3440;
+  spacing: 8px;
+  padding: 10px;
+}
+
+.message:hover {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.message-title {
+  color: #2E3440;
+  font-weight: bold;
+}
+
+.message-body {
+  color: #434C5E;
+}
+
+.message-close-button {
+  color: #434C5E;
+}
+
+.message-close-button:hover {
+  color: #2E3440;
+}
+
+.message-list-clear-button,
+.message-list-section-title {
+  color: #434C5E;
 }

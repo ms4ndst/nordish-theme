@@ -1,7 +1,9 @@
 # Nordish
 
-A minimal GNOME Shell theme and GTK2 "Legacy Applications" theme built on the
-[Nord color palette](https://github.com/nordtheme/nord).
+A GNOME Shell + GTK2/GTK3/GTK4 theme family built on the
+[Nord color palette](https://github.com/nordtheme/nord), in four
+variants: `Nordish-Dark`, `Nordish-Light`, and their `-Round`
+counterparts (see [Round variants](#round-variants) below).
 
 - **Dark variant** (`Nordish-Dark`): Polar Night background, Snow Storm text.
 - **Light variant** (`Nordish-Light`): Snow Storm background, Polar Night text.
@@ -11,8 +13,12 @@ A minimal GNOME Shell theme and GTK2 "Legacy Applications" theme built on the
 - The GNOME Shell top bar is semi-transparent in both variants
   (`rgba(46, 52, 64, 0.78)` dark / `rgba(236, 239, 244, 0.78)` light),
   turning more opaque on hover/overview for legibility.
+- Window control buttons (minimize/maximize/close) are circular, with a
+  subtle rest-state tint that shifts to the same Frost accent used for
+  the quick-settings toggle's checked state on hover
+  (`#88C0D0` dark / `#5E81AC` light).
 - Styling is deliberately flat and minimal: no gradients, subtle 1px
-  borders, small border radii.
+  borders, small border radii — except the `-Round` variants, see below.
 
 ## What's included
 
@@ -98,6 +104,28 @@ match the variant you picked (Settings → Appearance → Style) for the
 closest result in libadwaita apps — full re-theming of libadwaita
 itself is out of scope here.
 
+Beyond the classic `@theme_bg_color`-style named colors, each GTK4
+stylesheet also defines libadwaita's own separate named-color system
+(`@window_bg_color`, `@view_bg_color`, `@headerbar_bg_color`,
+`@accent_bg_color`, `@popover_bg_color`, etc.) — libadwaita widgets read
+these directly and otherwise fall back to their own internal defaults
+regardless of the classic names, which shows up as "the dialog chrome
+is themed but its buttons/dropdowns aren't." Defining both sets fixes
+this for most libadwaita apps.
+
+**Known limitation:** some dialogs shown via the XDG desktop portal
+(e.g. a Qt app's native Save dialog, routed through
+`xdg-desktop-portal-gnome`) can still show unstyled white
+buttons/dropdowns even with both named-color sets defined and the
+portal service restarted. This appears to be a hardcoded/internal
+behavior in that specific dialog implementation, not something a GTK
+theme file can reach — confirmed after checking that the portal's own
+`Settings.Read` D-Bus API correctly reports the dark/light preference,
+ruling out a settings-sync issue. Left as-is rather than routing
+around it (e.g. forcing affected apps onto a non-portal Qt dialog via
+`qt6ct`), since that trades a cosmetic issue for a bigger, unrelated
+dependency.
+
 Note on Electron apps (Slack, VS Code, Discord, ...): under Wayland
 these draw their own frame instead of getting one from the compositor,
 and Chromium's GTK integration colors that frame by querying a
@@ -124,9 +152,23 @@ variant matching your `color-scheme` setting.
 Written against the GNOME Shell selector set that's been stable since the
 3.3x/4x series (panel, quick settings, calendar, message list, OSD, modal
 dialogs, screenshot UI, etc.) and expected to keep working on GNOME 50.
-GNOME Shell degrades unknown selectors gracefully, so if a future release
-renames something, the rest of the theme keeps working — file an issue
-(or just tweak the CSS) for anything that looks unstyled.
+GNOME Shell degrades unknown selectors gracefully — an unmatched selector
+is silently ignored rather than erroring, which is convenient but means a
+stale/wrong selector name fails *silently* (the element just falls back
+to GNOME's own default styling, which can look plausible enough to miss
+at a glance). Several selectors in earlier versions of this theme turned
+out to be outdated this way (workspace-switcher dots, the calendar
+popover, the Activities button's workspace indicator). When in doubt
+about whether a selector is still current, extract GNOME's own default
+stylesheet and grep it rather than trusting an older theme or memory:
+
+```sh
+gresource extract /usr/share/gnome-shell/gnome-shell-theme.gresource \
+  /org/gnome/shell/theme/gnome-shell-dark.css > /tmp/gnome-shell-dark.css
+```
+
+If a future release renames something, file an issue (or just tweak the
+CSS) for anything that looks unstyled.
 
 ## Customizing
 

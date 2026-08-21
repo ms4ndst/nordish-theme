@@ -144,6 +144,12 @@ stage {
   padding: 6px;
 }
 
+/* 10% transparent (90% opaque), distinct from the general popup
+ * opacity above. */
+#calendarArea {
+  background-color: rgba(59, 66, 82, 0.9);
+}
+
 .popup-menu .popup-menu-item {
   color: #ECEFF4;
   spacing: 8px;
