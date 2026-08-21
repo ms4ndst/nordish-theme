@@ -8414,14 +8414,15 @@ button.close.titlebutton:not(.suggested-action):not(.destructive-action) {
 button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(46, 52, 64, 0.12);
+  background-color: #BF616A;
+  background-image: none;
   box-shadow: none;
 }
 
 button.minimize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(46, 52, 64, 0.18);
+  background-color: #A54E57;
   background-image: none;
   box-shadow: none;
 }
@@ -8432,7 +8433,7 @@ button.maximize.titlebutton:hover:not(.suggested-action):not(.destructive-action
 button.maximize.titlebutton:active:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action),
 button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
-  color: #2E3440;
+  color: #ECEFF4;
 }
 
 button.minimize.titlebutton:backdrop:not(.suggested-action):not(.destructive-action),

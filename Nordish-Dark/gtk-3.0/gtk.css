@@ -6318,7 +6318,19 @@ headerbar button.titlebutton:backdrop:hover,
 .default-decoration button.titlebutton:hover,
 decoration .titlebutton:hover {
   border-radius: 9999px;
-  background-color: rgba(236, 239, 244, 0.16);
+  background-color: #BF616A;
+  color: #ECEFF4;
+  border: none;
+  box-shadow: none;
+}
+
+.titlebar button.titlebutton:active,
+headerbar button.titlebutton:active,
+.default-decoration button.titlebutton:active,
+decoration .titlebutton:active {
+  border-radius: 9999px;
+  background-color: #A54E57;
+  color: #ECEFF4;
   border: none;
   box-shadow: none;
 }

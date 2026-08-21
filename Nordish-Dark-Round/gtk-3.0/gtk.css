@@ -8757,7 +8757,7 @@ headerbar button.close.titlebutton {
 headerbar button.minimize.titlebutton:hover,
 headerbar button.maximize.titlebutton:hover,
 headerbar button.close.titlebutton:hover {
-  background-color: rgba(236, 239, 244, 0.16);
+  background-color: #BF616A;
   background-image: none;
   box-shadow: none;
 }
@@ -8765,7 +8765,7 @@ headerbar button.close.titlebutton:hover {
 headerbar button.minimize.titlebutton:active,
 headerbar button.maximize.titlebutton:active,
 headerbar button.close.titlebutton:active {
-  background-color: rgba(236, 239, 244, 0.16);
+  background-color: #A54E57;
   background-image: none;
   box-shadow: none;
 }

@@ -141,6 +141,12 @@ stage {
   border: 1px solid rgba(216, 222, 233, 0.9);
   border-radius: 10px;
   box-shadow: none;
+}
+
+/* A touch more transparent than other popups — a subtle frosted look
+ * on the calendar specifically, without going so far it's unreadable. */
+#calendarArea {
+  background-color: rgba(236, 239, 244, 0.9);
   padding: 6px;
 }
 
